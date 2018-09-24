@@ -1,12 +1,75 @@
 <!DOCTYPE html>
-<html lang='en'>
-    <head>
-        <meta charset='utf-8'>
-        <title>Train Scheduler</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-   
-    <body>
-        
-    </body>
+<html lang="en">
+<head>
+    <title>Train Scheduler</title>
+    <meta charset ="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap, Firebase, CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="jumbotron">
+                    <h1 class="display-3">Book a train ride with us today!</h1>
+                    <hr class="my-2">
+                   
+                </div>
+                <div id="trainInfo" class="card">
+                        <div class="card-header">
+                             Train Schedule
+                        </div>
+                        <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Train Intervals</th>
+                                <th>Next Train</th>
+                                <th>Wait Time</th>                               
+                            </tr>
+                        </thead>
+                        <tbody id="trainData">
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        Enter a new train schedule!
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="TrainName">Train Name</label>
+                            <input type="text" name="TrainName" id="TrainName" class="form-control" placeholder="">
+                            <label for="destination">Destination</label>
+                            <input type="text" name="destination" id="destination" class="form-control" placeholder="">
+                            <label for="trainStart">First Train</label>
+                            <input type="text" name="trainStart" id="trainStart" class="form-control" placeholder="">
+                            <label for="trainFrequency">Intervals</label>
+                            <input type="text" name="trainFrequency" id="trainFrequency" class="form-control" placeholder="">
+                            <button class="btn btn-primary" id="submit-train" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery & javascript link -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+</body>
 </html>
